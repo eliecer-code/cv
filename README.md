@@ -1,8 +1,43 @@
-# React + Vite
+# Este es mi CV Web 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido a mi CV web! Este proyecto fue desarrollado utilizando React JS, Styled Components y React Icons. Aquí encontrarás información detallada sobre mi experiencia, habilidades y cómo contactarme.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React JS:** Potente biblioteca para construir interfaces de usuario interactivas y dinámicas.
+- **Styled Components:** Librería para escribir estilos en tus componentes de React con una sintaxis similar a la de CSS-in-JS.
+- **React Icons:** Librería que proporciona iconos populares de forma fácil y personalizable.
+
+## Características Principales
+
+- Diseño interactivo y atractivo.
+- Información organizada de manera clara y concisa.
+- Enlaces a perfiles de redes sociales y métodos de contacto.
+
+## Instalación
+
+1. Clona este repositorio: `git clone https://github.com/eliecer-code/cv`
+2. Instala las dependencias: `npm install`
+3. Inicia la aplicación: `npm run dev`
+
+## Personalización
+
+Siéntete libre de clonar este repositorio y personalizar el contenido según tus necesidades. Puedes cambiar la información del CV en el archivo `cv.json` y ajustar el diseño en los componentes de React y Styled Components.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras algún error o tienes mejoras sugeridas, abre un issue o envía una pull request.
+
+## Contacto
+
+- **Sitio Web:** [www.tu-cv-web.com](https://www.tu-cv-web.com)
+- **LinkedIn:** [Tu Nombre](https://www.linkedin.com/in/tu-nombre)
+- **Correo Electrónico:** <tu.email@example.com>
+- **Teléfono:** +123 456 789
+
+## Agradecimientos
+
+Gracias por visitar mi CV web. ¡Espero que encuentres la información que estás buscando y que disfrutes explorando el sitio!
+
+---
+**Hecho con ❤️ por Eliecer Diaz Arrieta**
