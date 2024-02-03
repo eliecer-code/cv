@@ -107,6 +107,8 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     color: #d4d4d4;
+    margin: 0;
+    padding: 0;
     
     .profile-date{
         display: flex;
@@ -149,6 +151,9 @@ const Container = styled.div`
             @media print{
                 .print{
                     display: block;
+                    h4{
+                        margin-top: 1em;
+                    }
                 }
                     .no-print{
                         display: none;

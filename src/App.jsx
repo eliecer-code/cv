@@ -24,7 +24,7 @@ function App() {
 export default App
 
 const Container = styled.div`
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 4em;
@@ -32,6 +32,11 @@ const Container = styled.div`
   margin: 0 auto;
 
   @media print{
-    padding: 4rem 2rem;
+    /* padding: 2rem;  */
+    /* width: 100%;  */
+    margin: 0;
+    @page{
+      margin: .5cm 2cm;
+    }
   }
 `
