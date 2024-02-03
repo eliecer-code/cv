@@ -9,7 +9,7 @@ function Projects() {
         <Section title="Proyectos">
             <GridContainer>
                 {
-                    projects.map(({ name, description, url }) => {
+                    projects.map(({ name, description, url, github, isActive, highlights }) => {
                         return (
                             <div className="card" key={name}>
                                 <header>
@@ -21,12 +21,14 @@ function Projects() {
                                             title='Ver demo'
                                         >{name}
                                         </a>
+                                        {isActive === true ? <span className='point'>🟢</span> : ""}
                                     </h3>
                                     <p>{description}</p>
                                 </header>
                                 <footer className="demo">
+                                    <p className='source'>{highlights}</p>
                                     <a
-                                        href="http://"
+                                        href={`${github}`}
                                         target='__blank'
                                         title='Ver codigo fuente en Github'
                                     >{<FaGithub />}</a>
@@ -45,7 +47,7 @@ export default Projects
 
 const GridContainer = styled.section`
     display: grid;
-    gap: 2em;
+    gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
     .card{
@@ -59,11 +61,32 @@ const GridContainer = styled.section`
         header{
             display: flex;
             flex-direction: column;
-            flex: 1;
+            /* flex: 1; */
             gap: 1em;
-        }
+            h3{
+                display: flex;
+                align-items: center;
+                gap: .3em;
+                .point{
+                    font-size: .5em;
+                }
+            }
 
+            
+        }
+        
         footer{
+            display:flex;
+            flex-direction: column;
+            .source{
+                background: #eeeeee;
+                font-size: .9em;
+                margin-bottom: 1em;
+                padding: 2px;
+                border-radius: 3px;
+                /* display: inline; */
+
+            }
             a{
                 font-size: 1.5em;
             }

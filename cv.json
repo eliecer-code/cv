@@ -18,7 +18,7 @@
       {
         "network": "LinkedIn",
         "username": "Eliecer Diaz",
-        "url": "https://linkedin.com/in/midudev"
+        "url": "https://www.linkedin.com/in/eliecer-diaz-1545bb18b/"
       },
       {
         "network": "GitHub",
@@ -92,7 +92,7 @@
       "keywords": ["Desarrollo Web", "Frontend"]
     },
     {
-      "name": "boosttrap",
+      "name": "Bootstrap",
       "level": "Medio",
       "keywords": [
         "Desarrollo Web",
@@ -141,6 +141,11 @@
       "name": "React",
       "level": "Medio",
       "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Python",
+      "level": "Medio",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
     }
   ],
   "languages": [
@@ -155,54 +160,53 @@
   ],
   "projects": [
     {
-      "name": "mars.codes",
+      "name": "Homepage",
       "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
-      "highlights": ["Elige tu propia aventura", "En desarrollo"],
-      "url": "https://mars.codes",
-      "github": ""
+      "description": "Challenge de frontendmentor.io donde se muestra la pagina principal o el home.",
+      "url": "https://news-homepage-main-nu-nine.vercel.app/",
+      "github": "https://github.com/eliecer-code/news-homepage-main",
+      "highlights": "Challenge frontendmentor.io"
     },
     {
-      "name": "AdventJS",
+      "name": "Advice App",
       "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
-      "highlights": [
-        "+1 millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
-      ],
-      "url": "https://advent.js/dev",
-      "github": ""
+      "description": "App que muestra consejos de forma aleatoria.",
+
+      "url": "https://advice-generator-eta-liart.vercel.app/",
+      "github": "https://github.com/eliecer-code/advice-generator",
+      "highlights": "Challenge frontendmentor.io"
     },
     {
-      "name": "Codember",
+      "name": "Age Calculator",
       "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
-      "highlights": ["+2000 usuarios activos", "Retos para cualquier lenguaje"],
-      "url": "https://codember.dev",
-      "github": ""
+      "description": "Challenge de frontendmentor.io que calcula la edad de una persona.",
+      "url": "https://age-calculator-app-swart.vercel.app/",
+      "github": "https://github.com/eliecer-code/age-calculator-app",
+      "highlights": "Challenge frontendmentor.io"
     },
     {
-      "name": "codi.link",
+      "name": "Newsletter",
       "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": ["100k visitas al mes", "Desarrollado por la comunidad"],
+      "description": "Formulario de suscripción al boletín con mensaje de éxito.",
       "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
+      "github": "https://github.com/midudev/codi.link",
+      "highlights": "Challenge frontendmentor.io"
     },
     {
-      "name": "Pruebas Técnicas",
+      "name": "Summary ",
       "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
-      "highlights": ["100% gratuito", "+500 soluciones de la comunidad"],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
+      "description": "Componente realizado con React  para mostrar un resumen conciso de datos importantes.",
+      "url": "https://results-summary-component-theta-olive.vercel.app/",
+      "github": "https://github.com/eliecer-code/RESULTS-SUMMARY-COMPONENT",
+      "highlights": "Challenge frontendmentor.io"
     },
     {
-      "name": "miduConf",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": ["+15k tickets repartidos", "+50k espectadores en directo"],
-      "url": "https://miduconf.com"
+      "name": "Team manage ",
+      "isActive": true,
+      "description": "App para administrar equipos de trabajos dentro una organización.",
+      "url": "https://my-org-cuenta-oss.vercel.app/",
+      "github": "https://github.com/eliecer-code/my_org",
+      "highlights": "Challenge frontendmentor.io"
     }
   ]
 }

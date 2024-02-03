@@ -6,3 +6,30 @@
   color: black;
   list-style: none;
 }
+
+p,
+span,
+li {
+  font-family: monospace;
+  color: rgb(71, 71, 71);
+}
+
+p,
+span {
+
+  line-height: 1.7em;
+  font-size: 1.2em;
+}
+
+li {
+  font-size: 1.1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  color: rgb(71, 71, 71);
+
+}

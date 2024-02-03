@@ -22,10 +22,10 @@ const Education = () => {
                                             target='__blank'
                                         ><h3>{institution}</h3></a>
                                     </div>
-                                    <time>{years}</time>
+                                    <span>{years}</span>
                                 </header>
                                 <footer>
-                                    <p>{area}</p>
+                                    <span>{area}</span>
                                 </footer>
                             </Article>
                         </li>

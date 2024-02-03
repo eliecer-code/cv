@@ -30,4 +30,8 @@ const Container = styled.div`
   gap: 4em;
   width: 700px;
   margin: 0 auto;
+
+  @media print{
+    padding: 4rem 2rem;
+  }
 `
