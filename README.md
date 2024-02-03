@@ -30,7 +30,7 @@ Siéntete libre de clonar este repositorio y personalizar el contenido según tu
 
 ## Contacto
 
-- **Sitio Web:** [www.tu-cv-web.com](https://www.tu-cv-web.com)
+- **Sitio Web:** [https://cv-mocha-one.vercel.app/](https://cv-mocha-one.vercel.app/)
 - **LinkedIn:** [Eliecer Diaz](https://www.linkedin.com/in/eliecer-diaz-1545bb18b/)
 - **Correo Electrónico:** <ejmenrique97@gmail.com>
 - **Teléfono:** +57 301 1723761
