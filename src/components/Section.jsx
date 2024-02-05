@@ -21,11 +21,12 @@ const Container = styled.section`
     font-weight: 700;
     line-height: 1.5;
     font-size: 1.5rem;
+    margin-bottom: 18px;
+    
   }
 
   @media (width <= 700px) {
     section {
-      margin-bottom: 38px;
     }
   }
 `
