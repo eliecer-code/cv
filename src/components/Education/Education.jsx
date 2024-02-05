@@ -43,5 +43,11 @@ const Article = styled.article`
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (width <= 700px) {
+            span{
+                font-size: 1em;
+            }
+        }
     }
 `
