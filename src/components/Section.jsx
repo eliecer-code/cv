@@ -17,7 +17,7 @@ export default Section
 const Container = styled.section`
     max-width: 700px;
   h2 {
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
     font-weight: 700;
     line-height: 1.5;
     font-size: 1.5rem;

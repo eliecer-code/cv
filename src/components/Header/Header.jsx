@@ -175,5 +175,13 @@ const Container = styled.div`
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        gap: 1em;
+        /* width: auto; */
+        footer{
+            .no-print{
+                justify-content: center;
+            }
+        }
     }
 `

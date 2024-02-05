@@ -31,9 +31,14 @@ const Container = styled.div`
   width: 700px;
   margin: 0 auto;
 
+  @media (width <= 700px) {
+    width: auto;
+  }
+
   @media print{
     /* padding: 2rem;  */
     /* width: 100%;  */
+    page-break-before: always;
     margin: 0;
     @page{
       margin: .5cm 2cm;

@@ -188,8 +188,8 @@
       "name": "Newsletter",
       "isActive": true,
       "description": "Formulario de suscripción al boletín con mensaje de éxito.",
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link",
+      "url": "https://newletter-sign-up-six.vercel.app/",
+      "github": "https://github.com/eliecer-code/newletter-sign-up",
       "highlights": "Challenge frontendmentor.io"
     },
     {
