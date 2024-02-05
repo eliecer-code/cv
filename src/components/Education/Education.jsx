@@ -1,7 +1,5 @@
 import React from 'react';
 import Section from '../Section';
-import { CiLink } from "react-icons/ci";
-
 import { education } from '../../../cv.json';
 import styled from 'styled-components';
 
