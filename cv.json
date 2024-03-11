@@ -38,6 +38,18 @@
       "highlights": ["Awarded 'Volunteer of the Month'"]
     }
   ],
+  "experience": [
+    {
+      "company": "FUNDACIÓN PARA LA COMPETITIVIDAD SOCIAL Y EL DESARROLLO SOSTENIBLE (COMSODES)",
+      "startDate": "2022",
+      "endDate": "2024",
+      "area": "ANALISTA Y DESARROLLADOR DE SOFTWARE JUNIOR",
+      "functions": [
+        "Desarrollo de aplicaciones web utilizando tecnologías modernas como react.js.",
+        "Colaboración en equipos ágiles para la entrega de proyectos de software"
+      ]
+    }
+  ],
   "education": [
     {
       "institution": "Universidad de Córdoba",
