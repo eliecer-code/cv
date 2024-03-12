@@ -1,75 +1,70 @@
+import { experience } from '../../../cv.json'
+
 import React from 'react'
 import Section from '../Section'
-import { experience } from '../../../cv.json'
-import styled from 'styled-components';
+import styled from 'styled-components'
+
 function Experience() {
     return (
-        <Section title="Experiencia laboral">
-            <ul>
-                {experience.map(({ company, startDate, endDate, area, functions }) => {
-                    const years = `${startDate} - ${endDate}`;
-                    return (
-                        <li key={company}>
-                            <Article>
-                                <header>
-                                    <div>
-                                        <h3>{company}</h3>
-                                    </div>
-                                    <span>{years}</span>
-                                </header>
-                                <footer>
+        <>
+            <Section title="Experiencia laboral">
+                {
+                    experience.map(({ company, startDate, endDate, area, functions }) => {
+                        const dateExperience = `${startDate} - ${endDate}`
+                        return (
+                            <Container key={company}>
+                                <div className="work-experience-info">
+                                    <h3><a href="">{company}</a></h3>
                                     <span>{area}</span>
-                                    <ul>
-                                        {
-                                            functions.map((func, index) => (
-                                                <li key={index}>{func}</li>
-                                            ))
-                                        }
-                                    </ul>
-                                </footer>
-                            </Article>
-                        </li>
-                    );
-                })}
-            </ul>
-        </Section>
+                                    {
+                                        functions.map((func, index) => (
+                                            <li key={index}>{func}</li>
+                                        ))
+                                    }
+                                </div>
+                                <div className="work-experience-date">
+                                    <span>{dateExperience}</span>
+                                </div>
+                            </Container>
+                        )
+                    })
+                }
+            </Section>
+        </>
     )
 }
 
 export default Experience
-const Article = styled.article`
-    header{
+
+const Container = styled.main`
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+
+
+    .work-experience-info{
+        width: 70%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        div{
-            width: 70vh;
-
+        flex-direction: column;
+        gap: 1em;
+        text-align: justify;
+        h3{
+            font-size: .8em;
         }
 
-        @media (max-width: 700px) {
+        li{
+            list-style: disc;
+            margin-left: 1.2em;
+        }
+    }
+
+    .work-experience-date{
+    }
+
+    @media (width <= 700px) {
             span{
                 font-size: 1em;
             }
         }
-    }
-
-    footer{
-        ul{
-            width: 70vh;
-            li{
-                list-style: disc;
-                margin-left: 2em;
-                text-align: justify;
-                padding-top: 1em;
-            }
-        }
-
-        @media (max-width: 700px) {
-            span{
-                font-size: 1em;
-            }
-        }
-    }
 `

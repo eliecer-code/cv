@@ -6,46 +6,65 @@ import styled from 'styled-components';
 const Education = () => {
     return (
         <Section title="Educación">
-            <ul>
-                {education.map(({ institution, url, startDate, endDate, area }) => {
-                     const years = `${startDate} - ${endDate}`;
-
+            {
+                education.map(({ institution, url, startDate, endDate, area }) => {
+                    const dateExperience = `${startDate} - ${endDate}`
                     return (
-                        <li key={institution}>
-                            <Article>
-                                <header>
-                                    <div>
-                                        <a
-                                            href={url}
-                                            target='__blank'
-                                        ><h3>{institution}</h3></a>
-                                    </div>
-                                    <span>{years}</span>
-                                </header>
-                                <footer>
-                                    <span>{area}</span>
-                                </footer>
-                            </Article>
-                        </li>
-                    );
-                })}
-            </ul>
+                        <Container key={institution}>
+                            <div className="education-info">
+                                <h3>
+                                    <a
+                                        href={url}
+                                        target='__blank'
+                                    >
+                                        {institution}
+                                    </a>
+                                </h3>
+                                <span>{area}</span>
+                            </div>
+                            <div className="education-date">
+                                <span>{dateExperience}</span>
+                            </div>
+                        </Container>
+                    )
+                })
+            }
         </Section>
     );
 };
 
 export default Education;
 
-const Article = styled.article`
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+const Container = styled.main`
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
 
-        @media (width <= 700px) {
+
+    .education-info{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        text-align: justify;
+        h3{
+            font-size: .8em;
+            text-transform: uppercase;
+        }
+
+        li{
+            list-style: disc;
+            margin-left: 1.2em;
+        }
+    }
+
+    .education-date{
+    }
+
+    @media (width <= 700px) {
             span{
                 font-size: 1em;
             }
         }
-    }
 `

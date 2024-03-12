@@ -39,9 +39,9 @@ const Container = styled.div`
     /* padding: 2rem;  */
     /* width: 100%;  */
     page-break-before: always;
-    margin: 0;
+    margin: 2em 0;
     @page{
-      margin: .5cm 2cm;
+      margin: 1cm 2cm;
     }
   }
 `
