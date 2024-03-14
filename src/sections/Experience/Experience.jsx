@@ -1,7 +1,7 @@
 import { experience } from '../../../cv.json'
 
 import React from 'react'
-import Section from '../Section'
+import Section from '../../components/Section'
 import styled from 'styled-components'
 
 function Experience() {

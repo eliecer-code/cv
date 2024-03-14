@@ -27,17 +27,6 @@
       }
     ]
   },
-  "volunteer": [
-    {
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
-    }
-  ],
   "experience": [
     {
       "company": "FUNDACIÓN PARA LA COMPETITIVIDAD SOCIAL Y EL DESARROLLO SOSTENIBLE (COMSODES)",
@@ -72,10 +61,46 @@
   ],
   "certificates": [
     {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
+      "name": "PYTHON PARA ANALISIS DE DATOS",
+      "hours": "160",
+      "image": "https://i.imgur.com/0LboIrR.jpg",
+      "year": "2023"
+    },
+    {
+      "name": "FRONT END G4 - ONE",
+      "hours": "93",
+      "image": "https://i.imgur.com/GzmmksM.jpeg",
+      "year": "2023"
+    },
+    {
+      "name": "HTML & CSS",
+      "hours": "65",
+      "image": "https://i.imgur.com/AZmOuYC.jpeg",
+      "year": "2023"
+    },
+    {
+      "name": "REACT G4 - ONE",
+      "hours": "68",
+      "image": "https://i.imgur.com/UxA9SBG.jpeg",
+      "year": "2023"
+    },
+    {
+      "name": "HTML, CSS, & JavaScript - Certification Course for beginners",
+      "hours": "5.5",
+      "image": "https://i.imgur.com/AidH25S.jpg",
+      "year": "2022"
+    },
+    {
+      "name": "DESARROLLO PERSONAL G4 - ONE",
+      "hours": "34",
+      "image": "https://i.imgur.com/sJAqsEn.jpeg",
+      "year": "2022"
+    },
+    {
+      "name": "Programa de Formación Habilidades en Programación",
+      "hours": "600",
+      "image": "https://i.imgur.com/11Arxm5.jpeg",
+      "year": "2021"
     }
   ],
   "publications": [

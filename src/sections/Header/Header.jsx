@@ -6,7 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
-import Section from '../Section';
+import Section from '../../components/Section';
 
 
 function Header() {

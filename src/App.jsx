@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import './App.css'
-import Header from './components/Header/Header'
-import About from './components/About/About'
-import Experience from './components/Experience/Experience'
-import Education from './components/Education/Education'
-import Projects from './components/Projects/Projects'
-import Habilities from './components/Habilities/Habilities'
+import Header from './sections/Header/Header'
+import About from './sections/About/About'
+import Experience from './sections/Experience/Experience'
+import Education from './sections/Education/Education'
+import Projects from './sections/Projects/Projects'
+import Habilities from './sections/Habilities/Habilities'
+import Certificates from './sections/Certificate/Certificates'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Experience />
       <Education />
       <Projects />
+      <Certificates />
       <Habilities />
     </Container>
   )
