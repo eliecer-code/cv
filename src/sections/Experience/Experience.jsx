@@ -23,7 +23,7 @@ function Experience() {
                                     }
                                 </div>
                                 <div className="work-experience-date">
-                                    <span>{dateExperience}</span>
+                                    <h4>{dateExperience}</h4>
                                 </div>
                             </Container>
                         )
@@ -37,10 +37,10 @@ function Experience() {
 export default Experience
 
 const Container = styled.main`
-    
-    display: flex;
     justify-content: space-between;
-    margin-top: 1.5em;
+    display: flex;
+    /* display: flex;
+    margin-top: 1.5em; */
     
 
     .work-experience-info{
@@ -56,6 +56,13 @@ const Container = styled.main`
         li{
             list-style: disc;
             margin-left: 1.2em;
+        }
+    }
+    
+    .work-experience-date{
+        
+        h4{
+            font-size: .8em;
         }
     }
     

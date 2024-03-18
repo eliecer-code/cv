@@ -23,7 +23,7 @@ const Education = () => {
                                 <span>{area}</span>
                             </div>
                             <div className="education-date">
-                                <span>{dateEducation}</span>
+                                <h4>{dateEducation}</h4>
                             </div>
                         </Container>
                     )
@@ -60,6 +60,9 @@ const Container = styled.main`
     }
 
     .education-date{
+        h4{
+            font-size: .8em;
+        }
     }
 
     @media (width <= 700px) {
