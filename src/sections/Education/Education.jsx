@@ -2,10 +2,12 @@ import React from 'react';
 import Section from '../../components/Section';
 import { education } from '../../../cv.json';
 import styled from 'styled-components';
+import TooltipCustomized from '../../components/TooltipCustomized';
 
 const Education = () => {
     return (
         <Section title="Educación">
+            <TooltipCustomized id="visit-website" />
             {
                 education.map(({ institution, url, startDate, endDate, area }) => {
                     const dateEducation = `${startDate} - ${endDate}`
@@ -16,6 +18,9 @@ const Education = () => {
                                     <a
                                         href={url}
                                         target='__blank'
+                                        data-tooltip-id='visit-website'
+                                        data-tooltip-content="Visitar sitio web"
+                                        data-tooltip-place='right'
                                     >
                                         {institution}
                                     </a>

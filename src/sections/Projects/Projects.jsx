@@ -3,10 +3,12 @@ import Section from '../../components/Section'
 import { projects } from '../../../cv.json'
 import styled from 'styled-components'
 import { FaGithub } from "react-icons/fa";
-
+import TooltipCustomized from '../../components/TooltipCustomized';
 function Projects() {
     return (
         <Section title="Proyectos">
+            <TooltipCustomized id="look-code" />
+            <TooltipCustomized id="look-demo" />
             <GridContainer>
                 {
                     projects.map(({ name, description, url, github, isActive, highlights }) => {
@@ -18,7 +20,9 @@ function Projects() {
                                         <a
                                             href={`${url}`}
                                             target='__blank'
-                                            title='Ver demo'
+                                            data-tooltip-id="look-demo"
+                                            data-tooltip-content="Ver demo"
+                                            data-tooltip-place="bottom"
                                         >{name}
                                         </a>
                                         {isActive === true ? <span className='point'>🟢</span> : ""}
@@ -30,7 +34,9 @@ function Projects() {
                                     <a
                                         href={`${github}`}
                                         target='__blank'
-                                        title='Ver codigo fuente en Github'
+                                        data-tooltip-id="look-code"
+                                        data-tooltip-content="Ver codigo fuente en GitHub"
+                                        data-tooltip-place="right"
                                     >{<FaGithub />}</a>
                                 </footer>
                             </div>
@@ -78,14 +84,13 @@ const GridContainer = styled.section`
         footer{
             display:flex;
             flex-direction: column;
+            align-items: start;
             .source{
                 background: #eeeeee;
                 font-size: .9em;
                 margin-bottom: 1em;
                 padding: 2px;
                 border-radius: 3px;
-                /* display: inline; */
-
             }
             a{
                 font-size: 1.5em;

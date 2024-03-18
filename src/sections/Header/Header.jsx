@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import Section from '../../components/Section';
 import { Tooltip } from 'react-tooltip'
-
+import TooltipCustomized from '../../components/TooltipCustomized';
 function Header() {
     function getIconByNetwork(network) {
         switch (network) {
@@ -49,9 +49,9 @@ function Header() {
 
                         </div>
                         <div className="no-print">
-                            <Tooltip className='toolTip' id="send-email" />
-                            <Tooltip className='toolTip' id="call-me" />
-                            <Tooltip className='toolTip' id="contact-social" />
+                            <TooltipCustomized id="send-email" />
+                            <TooltipCustomized className='toolTip' id="call-me" />
+                            <TooltipCustomized className='toolTip' id="contact-social" />
                             {
                                 email && (
                                     <a
@@ -87,7 +87,7 @@ function Header() {
                                         <a
                                             href={`${url}`}
                                             data-tooltip-id="contact-social"
-                                            data-tooltip-content={`Vista mi perfil de ${network}`}
+                                            data-tooltip-content={`Visita mi perfil de ${network}`}
                                             data-tooltip-place="bottom"
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -140,10 +140,6 @@ const Container = styled.div`
                 display: flex;
                 gap: .4em;
                 margin-top: 1em;
-
-                .toolTip{
-                    border-radius: 20px;
-                }
                 
                 a{
                     padding: 4px;
