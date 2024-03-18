@@ -25,6 +25,9 @@ function Header() {
     const { city, region } = location
     return (
         <Section>
+            <TooltipCustomized id="send-email" />
+            <TooltipCustomized className='toolTip' id="call-me" />
+            <TooltipCustomized className='toolTip' id="contact-social" />
 
             <Container>
 
@@ -49,9 +52,6 @@ function Header() {
 
                         </div>
                         <div className="no-print">
-                            <TooltipCustomized id="send-email" />
-                            <TooltipCustomized className='toolTip' id="call-me" />
-                            <TooltipCustomized className='toolTip' id="contact-social" />
                             {
                                 email && (
                                     <a
