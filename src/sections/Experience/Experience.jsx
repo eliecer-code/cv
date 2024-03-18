@@ -41,7 +41,7 @@ const Container = styled.main`
     display: flex;
     justify-content: space-between;
     margin-top: 1.5em;
-
+    
 
     .work-experience-info{
         width: 70%;
@@ -52,19 +52,19 @@ const Container = styled.main`
         h3{
             font-size: .8em;
         }
-
+        
         li{
             list-style: disc;
             margin-left: 1.2em;
         }
     }
-
-    .work-experience-date{
-    }
-
+    
     @media (width <= 700px) {
-            span{
-                font-size: 1em;
-            }
+        flex-direction: column-reverse;
+        gap: 1em;
+
+        .work-experience-info{
+            width: 100%;
+        }
         }
 `

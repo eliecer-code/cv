@@ -8,7 +8,7 @@ const Education = () => {
         <Section title="Educación">
             {
                 education.map(({ institution, url, startDate, endDate, area }) => {
-                    const dateExperience = `${startDate} - ${endDate}`
+                    const dateEducation = `${startDate} - ${endDate}`
                     return (
                         <Container key={institution}>
                             <div className="education-info">
@@ -23,7 +23,7 @@ const Education = () => {
                                 <span>{area}</span>
                             </div>
                             <div className="education-date">
-                                <span>{dateExperience}</span>
+                                <span>{dateEducation}</span>
                             </div>
                         </Container>
                     )
@@ -63,8 +63,10 @@ const Container = styled.main`
     }
 
     @media (width <= 700px) {
-            span{
-                font-size: 1em;
+        flex-direction: column-reverse;
+        gap: 1em;
+            .education-info{
+                width: 100%;
             }
         }
 `

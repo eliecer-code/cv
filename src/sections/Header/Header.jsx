@@ -7,7 +7,7 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import Section from '../../components/Section';
-
+import { Tooltip } from 'react-tooltip'
 
 function Header() {
     function getIconByNetwork(network) {
@@ -49,11 +49,16 @@ function Header() {
 
                         </div>
                         <div className="no-print">
+                            <Tooltip className='toolTip' id="send-email" />
+                            <Tooltip className='toolTip' id="call-me" />
+                            <Tooltip className='toolTip' id="contact-social" />
                             {
                                 email && (
                                     <a
                                         href={`mailto:${email}`}
-                                        title={`Enviar correo a ${name} a la direccion ${email}`}
+                                        data-tooltip-id="send-email"
+                                        data-tooltip-content={`Enviar correo a ${name}`}
+                                        data-tooltip-place="bottom"
                                         target='__blank'
                                         rel='noopener noreferrer'
                                         key={email}
@@ -64,7 +69,9 @@ function Header() {
                                 phone && (
                                     <a
                                         href={`tel:${phone}`}
-                                        title={`Llamar por teléfono a ${name} al número ${phone}`}
+                                        data-tooltip-id="call-me"
+                                        data-tooltip-content={`Llamar por teléfono a ${name}`}
+                                        data-tooltip-place="bottom"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         key={phone}
@@ -79,7 +86,9 @@ function Header() {
 
                                         <a
                                             href={`${url}`}
-                                            title={`Vista mi perfil de ${network}`}
+                                            data-tooltip-id="contact-social"
+                                            data-tooltip-content={`Vista mi perfil de ${network}`}
+                                            data-tooltip-place="bottom"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             key={url}
@@ -131,6 +140,10 @@ const Container = styled.div`
                 display: flex;
                 gap: .4em;
                 margin-top: 1em;
+
+                .toolTip{
+                    border-radius: 20px;
+                }
                 
                 a{
                     padding: 4px;
