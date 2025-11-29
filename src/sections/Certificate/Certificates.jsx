@@ -1,35 +1,24 @@
 import React from 'react'
 import Section from '../../components/Section'
-import styled from 'styled-components'
-import CardCertificate from '../../components/CardCertificate';
 import { certificates } from '../../../cv.json'
+import CardCertificate from '../../components/CardCertificate'
 
 function Certificates() {
     return (
         <Section title="Certificados">
-            <GridContainer>
-                {
-                    certificates.map(({ name, image, year, hours }) => {
-                        return (
-                            <CardCertificate
-                                key={name}
-                                name={name}
-                                image={image}
-                                year={year}
-                                hours={hours}
-                            />
-                        )
-                    })
-                }
-            </GridContainer>
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+                {certificates.map(({ image, year, hours, name }) => (
+                    <CardCertificate
+                        key={name}
+                        image={image}
+                        year={year}
+                        hours={hours}
+                        name={name}
+                    />
+                ))}
+            </div>
         </Section>
     )
 }
 
 export default Certificates
-
-const GridContainer = styled.section`
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-`

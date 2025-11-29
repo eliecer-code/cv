@@ -6,7 +6,7 @@
     "email": "ejmenrique97@gmail.com",
     "phone": "+57 3011723761",
     "url": "",
-    "summary": "Ingeniero de Sistemas con sólidos conocimientos en programación, bases de datos, desarrollo web con (HTML, CSS JAVASCRIPT Y REACT.JS) y tecnologías de la información. En busca de oportunidades para aplicar mis habilidades técnicas y aprender de manera colaborativa en un entorno profesional.",
+    "summary": "Ingeniero de Sistemas con fundamentos sólidos en programación, gestión de bases de datos y desarrollo web utilizando HTML, CSS, JavaScript y React.js. Comprometido con el aprendizaje continuo y la resolución eficiente de problemas, busco oportunidades para aportar valor con mis habilidades técnicas mientras crezco dentro de un entorno profesional colaborativo.",
     "location": {
       "address": "",
       "postalCode": "704050",
@@ -48,7 +48,9 @@
       "startDate": "2015",
       "endDate": "2023",
       "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
     }
   ],
   "awards": [
@@ -116,17 +118,27 @@
     {
       "name": "HTML",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend"]
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend"
+      ]
     },
     {
       "name": "CSS",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Diseño Responsive"
+      ]
     },
     {
       "name": "JavaScript",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend"]
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend"
+      ]
     },
     {
       "name": "Bootstrap",
@@ -151,7 +163,11 @@
     {
       "name": "Git",
       "level": "medio",
-      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente"
+      ]
     },
     {
       "name": "GitHub",
@@ -177,12 +193,22 @@
     {
       "name": "React",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
+      ]
     },
     {
       "name": "Python",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
+      ]
     }
   ],
   "languages": [
@@ -208,7 +234,6 @@
       "name": "Advice App",
       "isActive": true,
       "description": "App que muestra consejos de forma aleatoria.",
-
       "url": "https://advice-generator-eta-liart.vercel.app/",
       "github": "https://github.com/eliecer-code/advice-generator",
       "highlights": "Challenge frontendmentor.io"

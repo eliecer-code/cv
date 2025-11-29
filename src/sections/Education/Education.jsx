@@ -1,80 +1,59 @@
-import React from 'react';
-import Section from '../../components/Section';
-import { education } from '../../../cv.json';
-import styled from 'styled-components';
-import TooltipCustomized from '../../components/TooltipCustomized';
+import React from 'react'
+import Section from '../../components/Section'
+import { education } from '../../../cv.json'
+import TooltipCustomized from '../../components/TooltipCustomized'
 
-const Education = () => {
+function Education() {
     return (
         <Section title="Educación">
             <TooltipCustomized id="visit-website" />
-            {
-                education.map(({ institution, url, startDate, endDate, area }) => {
-                    const dateEducation = `${startDate} - ${endDate}`
+            <div className="space-y-8">
+                {education.map(({ institution, area, studyType, startDate, endDate, url }) => {
+                    const dateEducation = `${startDate} - ${endDate} `;
+
                     return (
-                        <Container key={institution}>
-                            <div className="education-info">
-                                <h3>
-                                    <a
-                                        href={url}
-                                        target='__blank'
-                                        data-tooltip-id='visit-website'
-                                        data-tooltip-content="Visitar sitio web"
-                                        data-tooltip-place='right'
-                                    >
-                                        {institution}
-                                    </a>
-                                </h3>
-                                <span>{area}</span>
+                        <div
+                            key={institution}
+                            className="relative pl-8 pb-8 border-l-2 border-accent-200 last:pb-0 group hover:border-accent-500 transition-colors duration-300"
+                        >
+                            {/* Timeline Dot */}
+                            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-500 border-4 border-white shadow-md group-hover:scale-125 transition-transform duration-300"></div>
+
+                            {/* Content Card */}
+                            <div className="bg-white rounded-xl p-6 shadow-card hover:shadow-hover card-hover">
+                                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                                            {studyType}
+                                        </h3>
+                                        <a
+                                            href={url}
+                                            target='_blank'
+                                            rel="noopener noreferrer"
+                                            data-tooltip-id='visit-website'
+                                            data-tooltip-content="Visitar sitio web"
+                                            data-tooltip-place='bottom'
+                                            className="text-accent-600 font-medium hover:text-accent-700 transition-colors inline-flex items-center gap-1"
+                                        >
+                                            {institution}
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-lg font-medium self-start">
+                                        {dateEducation}
+                                    </span>
+                                </div>
+
+                                <p className="text-gray-700 leading-relaxed">{area}</p>
                             </div>
-                            <div className="education-date">
-                                <h4>{dateEducation}</h4>
-                            </div>
-                        </Container>
-                    )
-                })
-            }
+                        </div>
+                    );
+                })}
+            </div>
         </Section>
-    );
-};
+    )
+}
 
-export default Education;
-
-const Container = styled.main`
-    
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.5em;
-
-
-    .education-info{
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        text-align: justify;
-        h3{
-            font-size: .8em;
-            text-transform: uppercase;
-        }
-
-        li{
-            list-style: disc;
-            margin-left: 1.2em;
-        }
-    }
-
-    .education-date{
-        h4{
-            font-size: .8em;
-        }
-    }
-
-    @media (width <= 700px) {
-        flex-direction: column-reverse;
-        gap: 1em;
-            .education-info{
-                width: 100%;
-            }
-        }
-`
+export default Education

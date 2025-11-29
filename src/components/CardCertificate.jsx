@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
 
 function CardCertificate({ image, year, hours, name }) {
     const [showModal, setShowModal] = useState(false);
@@ -31,124 +30,68 @@ function CardCertificate({ image, year, hours, name }) {
     }, [showModal]);
 
     return (
-        <Card>
-            <div className="container-image" onClick={toggleModal}>
-                <img src={image} alt="" />
-                <span className="icon">👁️‍🗨️</span>
+        <>
+            <div className="group bg-white rounded-xl p-5 shadow-card hover:shadow-hover card-hover flex gap-5">
+                {/* Certificate Preview */}
+                <div className="relative flex-shrink-0 cursor-pointer" onClick={toggleModal}>
+                    <div className="relative overflow-hidden rounded-lg">
+                        <img
+                            src={image}
+                            alt={name}
+                            className="w-36 h-auto object-cover transition-all duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span className="text-4xl">👁️‍🗨️</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Certificate Info */}
+                <div className="flex-1 flex flex-col justify-center space-y-2">
+                    <h3 className="font-semibold text-gray-900 leading-tight">{name}</h3>
+                    <div className="flex flex-wrap gap-2">
+                        <span className="inline-flex items-center gap-1 text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded-md font-medium">
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            {hours} hrs
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-md font-medium">
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            {year}
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div className="container-info">
-                <h3>{name}</h3>
-                <p>Duración: {hours} hrs</p>
-                <p>Año: {year}</p>
-            </div>
+
+            {/* Modal */}
             {showModal && (
-                <Modal>
-                    <ModalContent>
-                        <CloseBtn onClick={toggleModal}>×</CloseBtn>
-                        <img src={image} alt="" />
-                    </ModalContent>
-                </Modal>
+                <div
+                    className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
+                    onClick={toggleModal}
+                >
+                    <div
+                        className="relative w-full max-w-4xl animate-scale-in"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <img
+                            src={image}
+                            alt={name}
+                            className="w-full h-auto rounded-xl shadow-2xl"
+                        />
+                        <button
+                            onClick={toggleModal}
+                            className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white text-2xl hover:bg-black/70 transition-colors duration-300"
+                        >
+                            ×
+                        </button>
+                    </div>
+                </div>
             )}
-        </Card>
+        </>
     )
 }
 
 export default CardCertificate
-
-const Card = styled.section`
-    position: relative;
-    display: flex;
-    gap: 1em;
-    .container-image {
-        position: relative;
-        img {
-            width: 150px;
-            transition: filter 0.3s ease;
-            cursor: pointer;
-        }
-        .icon {
-            transition: all .3s ease;
-            display: none;
-            position: absolute;
-            left: 50%;
-            bottom: 50%;
-            transform: translate(-50%, 50%);
-            z-index: 1;
-        }
-        &:hover {
-            img {
-                filter: blur(1px);
-            }
-            .icon {
-                display: block;
-            }
-        }
-    }
-    .container-info {
-        display: flex;
-        flex-direction: column;
-        gap: .3em;
-    }
-    @media (max-width: 700px) {
-        span,h3, p{
-            font-size: .9em;
-        }
-    }
-`
-
-const Modal = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 999;
-`;
-
-const ModalContent = styled.div`
-    position: relative;
-    padding: 20px;
-    /* background-color: red; */
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    /* overflow: auto; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img{
-        width: 60%;
-        @media (width <= 700px) {
-            width:100%
-      }
-    }
-
-`;
-
-const CloseBtn = styled.span`
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 24px;
-    &:hover {
-        background-color: #ffffff42;
-    }
-
-    @media (width <= 700px) {
-
-      }
-`;
