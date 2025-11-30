@@ -63,7 +63,7 @@ function Header() {
                         </div>
 
                         {/* Contact Buttons */}
-                        <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                        <div className="flex flex-wrap justify-center gap-2 md:justify-start">
                             {email && (
                                 <a
                                     href={`mailto:${email} `}
@@ -72,7 +72,7 @@ function Header() {
                                     data-tooltip-place="bottom"
                                     target='_blank'
                                     rel='noopener noreferrer'
-                                    className="group flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-primary-500 text-primary-600 rounded-lg font-medium shadow-sm hover:bg-primary-500 hover:text-white hover:shadow-hover transition-all duration-300"
+                                    className="group flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-gray-500 text-gray-700 rounded-lg font-medium shadow-sm hover:bg-primary-500 hover:text-white hover:border-primary-500 hover:shadow-md transition-all duration-300"
                                 >
                                     <MdOutlineEmail className="text-xl" />
                                     <span className="hidden sm:inline">Email</span>
@@ -86,7 +86,7 @@ function Header() {
                                     data-tooltip-place="bottom"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-gray-300 text-gray-700 rounded-lg font-medium shadow-sm hover:border-primary-500 hover:text-primary-600 hover:shadow-md transition-all duration-300"
+                                    className="group flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-gray-500 text-gray-700 rounded-lg font-medium shadow-sm hover:bg-primary-500 hover:text-white hover:border-primary-500 hover:shadow-md transition-all duration-300"
                                 >
                                     <MdOutlineLocalPhone className="text-xl" />
                                     <span className="hidden sm:inline">Teléfono</span>
@@ -101,7 +101,7 @@ function Header() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     key={url}
-                                    className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-lg font-medium shadow-md hover:shadow-hover hover:scale-105 transition-all duration-300"
+                                    className="group flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-gray-500 text-gray-700 rounded-lg font-medium shadow-sm hover:bg-primary-500 hover:text-white hover:border-primary-500 hover:shadow-md transition-all duration-300"
                                 >
                                     {getIconByNetwork(network)}
                                     <span className="hidden sm:inline">{network}</span>
